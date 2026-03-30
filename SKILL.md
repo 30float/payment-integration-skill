@@ -1,12 +1,10 @@
 ---
 name: payment-integration-skill
 description: Plan and implement Stripe subscription billing for Next.js SaaS apps using Checkout, Customer Portal, webhooks, and app-side entitlement sync.
-version: 0.1.0
+version: 0.1.1
 author: 30float
 license: MIT
-metadata:
-  hermes:
-    tags: [payments, stripe, billing, nextjs, saas]
+tags: [payments, stripe, billing, nextjs, saas, ai-agents]
 ---
 
 # Payment Integration Skill
@@ -14,6 +12,13 @@ metadata:
 ## Overview
 
 Use this skill to help an AI coding agent plan and implement Stripe subscription billing for a Next.js SaaS app. V1 is intentionally narrow: Stripe-only, subscriptions-only, and optimized for a plan-first workflow using Stripe Checkout, Stripe Customer Portal, webhook-driven state sync, and app-side entitlement modeling.
+
+This file is written to be **portable across agent ecosystems**. It should work as:
+- an installable skill in agent platforms that support skills
+- a reusable prompt module in agent platforms that use prompt bundles or task playbooks
+- a structured internal operating guide for custom in-house agents
+
+The frontmatter is intentionally minimal and generic. If a platform does not use frontmatter, the instructions below should still remain usable as plain Markdown.
 
 This skill supports both:
 - **user-based billing** for personal SaaS products

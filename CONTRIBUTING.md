@@ -10,6 +10,7 @@ V1 focuses on:
 - Next.js SaaS apps
 - user or workspace billing
 - Stripe Checkout + Customer Portal + webhook-driven state sync
+- portable agent instructions that are not tied to a single agent framework
 
 ## Good contributions
 

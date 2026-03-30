@@ -96,11 +96,24 @@ That default path is not the only valid one, but it is a strong default for gett
 - `ROADMAP.md` — future scope and expansion areas
 - `CONTRIBUTING.md` — contribution boundaries and quality expectations
 
+## Agent compatibility
+
+This repo is intended to be **agent-agnostic**.
+
+It should be usable with Hermes, Claude Code, Codex-style agents, OpenCode, custom internal agents, or any other system that can consume structured prompt/skill instructions plus supporting reference files.
+
+The core design choice is simple: keep the main operating instructions in plain Markdown, use only minimal generic frontmatter, and keep the surrounding materials modular.
+
 ## Installation / usage
 
-The exact installation flow depends on the target agent platform. At minimum, the core deliverable is the `SKILL.md` file plus the supporting references and templates in this repository.
+The exact installation flow depends on the target agent platform, but the portable contract is:
 
-If your agent platform supports installable skills or prompt bundles, use `SKILL.md` as the primary skill entrypoint and keep the `references/`, `templates/`, and `examples/` directories available as linked support material.
+- `SKILL.md` is the primary operating prompt / skill document
+- `references/` contains supporting architecture and safety guidance
+- `templates/` contains structured outputs and intake scaffolding
+- `examples/` shows expected behavior and sample interaction patterns
+
+If a platform supports installable skills, use `SKILL.md` as the entrypoint. If it does not, the same file can still be dropped into a system prompt, agent instruction bundle, or internal playbook with the support docs kept alongside it.
 
 ## Safety philosophy
 
