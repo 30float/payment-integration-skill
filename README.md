@@ -1,6 +1,6 @@
 # payment-integration-skill
 
-Public installable skill for AI coding agents to plan and implement production-ready Stripe subscription billing in Next.js SaaS apps.
+Portable payment integration guide for AI coding agents to plan and implement production-ready Stripe subscription billing in Next.js SaaS apps.
 
 ## Why this exists
 
@@ -89,7 +89,8 @@ That default path is not the only valid one, but it is a strong default for gett
 
 ## Repository contents
 
-- `SKILL.md` — the installable skill and operating instructions for agents
+- `AGENT_GUIDE.md` — neutral entrypoint for agent ecosystems that do not think in terms of skills
+- `SKILL.md` — installable skill entrypoint for platforms that support skill-style packaging
 - `references/` — architecture, modeling, and safety guidance
 - `templates/` — structured intake, planning, dashboard, and verification templates
 - `examples/` — sample scenarios and agent interaction patterns
@@ -108,12 +109,13 @@ The core design choice is simple: keep the main operating instructions in plain 
 
 The exact installation flow depends on the target agent platform, but the portable contract is:
 
-- `SKILL.md` is the primary operating prompt / skill document
+- `AGENT_GUIDE.md` is the neutral operating entrypoint
+- `SKILL.md` is the skill-oriented entrypoint for platforms that expect that convention
 - `references/` contains supporting architecture and safety guidance
 - `templates/` contains structured outputs and intake scaffolding
 - `examples/` shows expected behavior and sample interaction patterns
 
-If a platform supports installable skills, use `SKILL.md` as the entrypoint. If it does not, the same file can still be dropped into a system prompt, agent instruction bundle, or internal playbook with the support docs kept alongside it.
+If a platform supports installable skills, use `SKILL.md` as the entrypoint. If it prefers agent guides, prompt modules, or internal playbooks, use `AGENT_GUIDE.md`. The two files should stay aligned so the repo remains portable instead of framework-bound.
 
 ## Safety philosophy
 
